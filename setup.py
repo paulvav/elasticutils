@@ -8,5 +8,5 @@ setuptools.setup(
     description="Utility Functions for Elasticsearch",
     url="https://github.com/paulvav/elasticutils",
     py_modules = ['elasticutils'],
-    install_requires = ["requests","json"]
+    install_requires = ["requests"]
 )

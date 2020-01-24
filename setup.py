@@ -7,5 +7,5 @@ setuptools.setup(
     author_email="paulvav@gmail.com",
     description="Utility Functions for Elasticsearch",
     url="https://github.com/paulvav/elasticutils",
-    py_modules = ['elastic_utils.py']
+    py_modules = ['elasticutils']
 )

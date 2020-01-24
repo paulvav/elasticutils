@@ -88,7 +88,6 @@ class ElasticUtil:
             script_command['source'] += line+";"
         script_command = script_command
         es_query = {"script":script_command,"query":{"match_all":{}}}
-
         es_response = requests.request("post",self.es_url+self.index+"/"+"_update_by_query",json=es_query,headers=headers)
         return es_response
 

@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="elasticutils",
-    version="0.0.1",
+    version="0.0.2",
     author="Paul Vavich",
     author_email="paulvav@gmail.com",
     description="Utility Functions for Elasticsearch",

@@ -52,6 +52,19 @@ class ElasticUtil:
 
         return hit
 
+    # Function to search for document via its _id
+    def search_by_ids(self,value,source=[]):
+        es_query = {"_source": source,
+                    "query": {"ids": {"values": value}}}
+        es_url = self.es_url + self.index+"/_search"
+        es_response = requests.request("GET", es_url, json=es_query).json()
+
+        try:
+            hit = es_response['hits']['hits'][0]['_source']
+        except Exception as e:
+            return {"exception":str(e)}
+
+        return hit
 
     # Match all documents in the index
     # Optional parameter: source - to include only a subset of fields
